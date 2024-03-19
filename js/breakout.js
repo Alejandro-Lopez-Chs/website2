@@ -1,6 +1,6 @@
 rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
-cbtn = document.querySelector('btn')
+cbtn = document.getElementById('close-btn')
 
 
 rbtn.addEventListener('click', () => {
