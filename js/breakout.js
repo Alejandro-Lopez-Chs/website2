@@ -1,7 +1,8 @@
 rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
-canvas = document.getElemtntById('canvas')
+
+canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
 
 // Create ball properties
@@ -14,11 +15,22 @@ ball = {
     dy: -4,
 }
 
+// Create Paddle properties
+paddle = {
+    x: canvas.width / 2 - 40,
+    y: canvas.height -20,
+    w: 80,
+    h: 10,
+    speed: 8,
+    dx: 0,
+}
 // Draw ball on canvas
 function drawBall() {
     ctx.beginPath()
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
-    ctx.stroke()
+    ctx.fillStyle = '#6163c2'
+    ctx.fill()
+    ctx.closePath()
 }
 
 drawBall()
