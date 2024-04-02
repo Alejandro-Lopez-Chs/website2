@@ -11,7 +11,7 @@ brickRowCount = 9
 brickColumnCount =5
 
 
-// Create ball properties
+// Create properties
 ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
@@ -178,6 +178,7 @@ function moveBall () {
                 if (
                     ball.x - ball.size > brick.x && //Left brick side
                     ball.x + ball.size < brick.x + brick.w && //right
+                    ball.y + ball.size > brick.y && // top
                     ball.y - ball.size < brick.y + brick.h //bottom
                 ) {
                     ball.dy = -1 * ball.dy
