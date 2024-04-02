@@ -166,8 +166,7 @@ function moveBall () {
     if (
         ball.x - ball.size > paddle.x &&
         ball.x + ball.size < paddle.x + paddle.w &&
-        ball.y + ball.size > paddle.y &&
-        ball.y - ball.size < paddle.y + paddle.h
+        ball.y + ball.size > paddle.y
     ) {
         ball.dy = -1 * ball.speed
     }
