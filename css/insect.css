@@ -42,3 +42,16 @@ body {
 .btn:hover {
     opacity: 0.9;
 }
+
+
+.screen.up {
+    margin-top: -00vh
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    line-height: 1.4;
+}
