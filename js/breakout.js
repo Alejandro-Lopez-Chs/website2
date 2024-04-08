@@ -2,8 +2,8 @@ rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
 pbtn = document.getElementById('playbtn')
-dbtn = document.getElementbyClassName('btn mode-btn day')
-nbtn = document.getElementbyClassName('btn day-btn active')
+dbtn = document.getElementById('nightbtn')
+nbtn = document.getElementById('daybtn')
 
 dbtn.addEventListener('click', () => {
     update()
