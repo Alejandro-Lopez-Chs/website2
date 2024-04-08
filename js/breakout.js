@@ -2,8 +2,8 @@ rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
 pbtn = document.getElementById('playbtn')
-dbtn = document.getElementById('nightbtn')
-nbtn = document.getElementById('daybtn')
+dbtn = document.getElementById('daybtn')
+nbtn = document.getElementById('nightbtn')
 
 dbtn.addEventListener('click', () => {
     daybtn.classList.add('active')

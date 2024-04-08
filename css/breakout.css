@@ -96,6 +96,6 @@ h1 {
     background-color: blue;
 }
 
-.mode-btn.night.active {
+.night-btn.active {
     display: none;
 }
