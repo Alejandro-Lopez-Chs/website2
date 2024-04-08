@@ -1,6 +1,28 @@
 rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
+pbtn = document.getElementById('playbtn')
+dbtn = document.getElementbyClassName('btn mode-btn day')
+nbtn = document.getElementbyClassName('btn mode-btn night')
+
+dbtn.addEventListener('click', () => {
+    update()
+})
+
+nbtn.addEventListener('click', () => {
+    update()
+})
+
+pbtn.addEventListener('click', () => {
+    update()
+}, { once: true })
+
+pbtn.addEventListener('click', () => {
+    Ballstart()
+    showAllBrick()
+    score = 0
+    playbtn.classList.add('active')
+})
 
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
@@ -152,9 +174,11 @@ function moveBall () {
 
      //wall collision (bottom)
      if (ball.y + ball.size > canvas.height) {
-        ball.dy = -1 * ball.dy
-        showAllBrick()
-        score = 0
+        ball.dy = 0
+        ball.dx = 0
+        playbtn.classList.remove('active')
+        paddlestop()
+
     }
 
     //wall collision (left)
@@ -197,7 +221,7 @@ function increaseScore() {
 
     if (score == brickRowCount * brickColumnCount) {
         score = 0
-        showAllBricks ()
+        showAllBrick()
     }
 }
 
@@ -209,7 +233,16 @@ function showAllBrick() {
     })
 }
 
-
+function Ballstart() {
+    ball.x = canvas.width / 2
+    ball.y = canvas.height / 2
+    ball.dx = 4
+    ball.dy = -4
+    ball.speed = 6
+}
+function paddlestop() {
+    paddle.dx = 0
+}
 // update canvas drawing and animatino
    function update() {
     moveBall()
@@ -218,7 +251,7 @@ function showAllBrick() {
     requestAnimationFrame(update)
    }
 
-   update()
+
 
 
 

@@ -47,6 +47,7 @@ h1 {
     left: 30px;
 }
 
+
 .rules {
     position: absolute;
     top: 0;
@@ -63,4 +64,38 @@ h1 {
 
 .rules.show {
     transform: translateX(0);
+}
+.play-btn {
+    position: absolute;
+    background-color: green;
+    bottom: 60px;
+    display: inline;
+}
+
+.play-btn.active {
+    background-color: blue;
+    display: none;
+}
+
+.day-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: yellow;
+}
+
+
+.day-btn.active {
+    display: none;
+}
+
+.night-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: blue;
+}
+
+.mode-btn.night.active {
+
 }
