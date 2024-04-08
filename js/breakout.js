@@ -6,11 +6,13 @@ dbtn = document.getElementById('nightbtn')
 nbtn = document.getElementById('daybtn')
 
 dbtn.addEventListener('click', () => {
-    rules.classList.remove('show')
+    daybtn.classList.add('active')
+    nightbtn.classList.remove('active')
 })
 
 nbtn.addEventListener('click', () => {
     daybtn.classList.remove('active')
+    nightbtn.classList.add('active')
 })
 
 pbtn.addEventListener('click', () => {
