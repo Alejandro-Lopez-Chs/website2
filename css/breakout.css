@@ -99,3 +99,14 @@ h1 {
 .night-btn.active {
     display: none;
 }
+
+body.night {
+    background-color: #c399cf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
