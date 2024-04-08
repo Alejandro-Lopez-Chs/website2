@@ -97,5 +97,5 @@ h1 {
 }
 
 .mode-btn.night.active {
-
+    display: none;
 }
