@@ -14,7 +14,7 @@ dbtn.addEventListener('click', () => {
 nbtn.addEventListener('click', () => {
     daybtn.classList.remove('active')
     nightbtn.classList.add('active')
-    document.body.style.backgroundColor = 'green'
+    document.body.style.backgroundColor = '#46374a'
 })
 
 pbtn.addEventListener('click', () => {
