@@ -3,7 +3,7 @@ rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
 pbtn = document.getElementById('playbtn')
 dbtn = document.getElementbyClassName('btn mode-btn day')
-nbtn = document.getElementbyClassName('btn mode-btn night')
+nbtn = document.getElementbyClassName('btn day-btn active')
 
 dbtn.addEventListener('click', () => {
     update()
