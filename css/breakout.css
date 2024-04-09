@@ -69,7 +69,7 @@ h1 {
 }
 .play-btn {
     position: absolute;
-    background-color: green;
+    background-color: #870f0f;
     bottom: 60px;
     display: inline;
 }
