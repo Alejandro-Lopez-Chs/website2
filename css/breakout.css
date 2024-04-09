@@ -89,6 +89,10 @@ h1 {
     display: none;
 }
 
+.day-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .night-btn {
     position: absolute;
     top: 20px;
