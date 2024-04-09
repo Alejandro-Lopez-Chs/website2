@@ -70,4 +70,9 @@ h1 {
 
 .choose-insect-btn {
     background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    width: 15px;
 }
