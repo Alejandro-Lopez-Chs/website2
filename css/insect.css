@@ -112,5 +112,12 @@ h1 {
     position: absolute;
     top: 0;
     left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease in;
+}
+
+.message.visible {
     transform: translate(-50%, 150%);
+    opacity: 1;
 }
