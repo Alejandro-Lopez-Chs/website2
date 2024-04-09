@@ -17,6 +17,7 @@ nbtn.addEventListener('click', () => {
     daybtn.classList.remove('active')
     nightbtn.classList.add('active')
     document.body.style.backgroundColor = '#46374a'
+    canvas.classList.add('night')
     playbtn.classList.add('night')
 })
 
