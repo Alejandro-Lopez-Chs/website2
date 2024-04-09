@@ -20,6 +20,10 @@ canvas {
     border-radius: 5px;
 }
 
+canvas.night {
+    background-color: #c5b5c9;
+}
+
 h1 {
     font-size: 75px;
     font-family: "Honk", system-ui;
@@ -69,9 +73,13 @@ h1 {
 }
 .play-btn {
     position: absolute;
-    background-color: #870f0f;
+    background-color: #b85a8f;
     bottom: 60px;
     display: inline;
+}
+
+.play-btn.night {
+    background-color: #66304f;
 }
 
 .play-btn.active {
@@ -83,7 +91,7 @@ h1 {
     position: absolute;
     top: 20px;
     right: 40px;
-    background-color: #b0870b;
+    background-color: #95b9c2;
 }
 
 
@@ -92,7 +100,7 @@ h1 {
 }
 
 .day-btn:hover {
-    background-color: #9e7b10;
+    background-color: #89aab3;
 }
 
 .night-btn {

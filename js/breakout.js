@@ -9,12 +9,15 @@ dbtn.addEventListener('click', () => {
     daybtn.classList.add('active')
     nightbtn.classList.remove('active')
     document.body.style.backgroundColor = '#c399cf'
+    canvas.classList.remove('night')
+    playbtn.classList.remove('night')
 })
 
 nbtn.addEventListener('click', () => {
     daybtn.classList.remove('active')
     nightbtn.classList.add('active')
     document.body.style.backgroundColor = '#46374a'
+    playbtn.classList.add('night')
 })
 
 pbtn.addEventListener('click', () => {
