@@ -11,6 +11,7 @@ dbtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#c399cf'
     canvas.classList.remove('night')
     playbtn.classList.remove('night')
+    ctx.fillStyle = green
 })
 
 nbtn.addEventListener('click', () => {
