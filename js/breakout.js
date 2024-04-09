@@ -11,7 +11,6 @@ dbtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#c399cf'
     canvas.classList.remove('night')
     playbtn.classList.remove('night')
-    ctx.fillStyle = green
 })
 
 nbtn.addEventListener('click', () => {
@@ -20,6 +19,7 @@ nbtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#46374a'
     canvas.classList.add('night')
     playbtn.classList.add('night')
+    nightPaddle()
 })
 
 pbtn.addEventListener('click', () => {
@@ -100,6 +100,15 @@ function drawPaddle() {
     ctx.fill()
     ctx.closePath()
 }
+
+function nightPaddle() {
+    ctx.beginPath()
+    ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h)
+    ctx.fillStyle = 'green'
+    ctx.fill()
+    ctx.closePath()
+}
+
 
 
 //Draw Score on canvasa
