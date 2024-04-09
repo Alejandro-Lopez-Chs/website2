@@ -74,5 +74,15 @@ h1 {
     color: white;
     cursor: pointer;
     font-family: inherit;
-    width: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-insect-btn:hover {
+    background-color: #ffffff;
+    color: #5160ff
+}
+
+.choose-insect-btn:active {
+    background-color: rgba(255, 255, 255, 0.7);
 }
