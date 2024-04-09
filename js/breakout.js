@@ -104,7 +104,7 @@ function drawPaddle() {
 function nightPaddle() {
     ctx.beginPath()
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h)
-    ctx.fillStyle = 'green'
+    ctx.fillStyle = green
     ctx.fill()
     ctx.closePath()
 }
