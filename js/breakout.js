@@ -92,6 +92,14 @@ function drawBall() {
     ctx.closePath()
 }
 
+function nightBall() {
+    ctx.beginPath()
+    ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
+    ctx.fillStyle = '#a2cc41'
+    ctx.fill()
+    ctx.closePath()
+}
+
 //Draw Paddle on canvas
 function drawPaddle() {
     ctx.beginPath()
@@ -104,7 +112,7 @@ function drawPaddle() {
 function nightPaddle() {
     ctx.beginPath()
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h)
-    ctx.fillStyle = green
+    ctx.fillStyle = '#52a35c'
     ctx.fill()
     ctx.closePath()
 }
@@ -131,6 +139,17 @@ function drawBricks() {
     })
 }
 
+function nightBricks() {
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            ctx.beginPath()
+            ctx.rect(brick.x, brick.y, brick.w, brick.h)
+            ctx.fillStyle = brick.visible ? '#29353b' : 'transparent';
+            ctx.fill()
+            ctx.closePath()
+        })
+    })
+}
 console.log(bricks)
 
 //Draw everything
@@ -142,6 +161,15 @@ function draw()
     drawScore()
     drawBricks()
 }
+
+function nightdraw()
+{
+
+    nightBall()
+    nightPaddle()
+    nightBricks()
+}
+
 // Move paddle on canvas
 function movePaddle() {
     paddle.x = paddle.x + paddle.dx
