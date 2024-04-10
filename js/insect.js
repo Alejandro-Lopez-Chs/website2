@@ -43,6 +43,7 @@ function increaseTime() {
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds++
 }
+
 function createInsect() {
     const insect = document.createElement('div')
     insect.classList.add('insect')
