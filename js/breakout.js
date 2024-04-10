@@ -19,7 +19,7 @@ nbtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#46374a'
     canvas.classList.add('night')
     playbtn.classList.add('night')
-    nightPaddle()
+    nightdraw()
 })
 
 pbtn.addEventListener('click', () => {
