@@ -40,6 +40,8 @@ function increaseTime() {
     if (s < 10) {
         s = `0${s}`
     }
+    timeEl.innerHTML = `Time: ${m}:${s}`
+    seconds++
 }
 function createInsect() {
     const insect = document.createElement('div')
