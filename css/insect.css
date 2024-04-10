@@ -120,6 +120,7 @@ h1 {
 
 .message.visible {
     transform: translate(-50%, 150%);
+    display: contents;;
 }
 
 
