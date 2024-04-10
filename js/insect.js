@@ -32,7 +32,8 @@ function startGame() {
 }
 
 functino increaseTime() {
-    let m = Mtah.floor(seconds / 60)
+    let m = Math.floor(seconds / 60)
+    let s = 
 }
 function createInsect() {
     const insect = document.createElement('div')
