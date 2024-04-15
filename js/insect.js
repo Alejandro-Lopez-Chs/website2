@@ -5,6 +5,8 @@ const start_btn = document.getElementById('start-btn')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
+wmes = document.getElementById('winmes')
+lmes = document.getElementById('losemes')
 
 let seconds = 0
 let score = 0
@@ -22,7 +24,7 @@ choose_insect_btns.forEach(btn => {
         screens[1].classList.add('up')
         selected_insect = {src, alt}
         setTimeout(createInsect, 1000)
-
+        checkwin()
         startGame()
     })
 })
@@ -81,4 +83,17 @@ function getRandomLocation() {
     const x = Math.random() * (width - 200) + 100
     const y = Math.random() * (height - 200) + 100
     return { x, y }
+}
+
+
+function checkwin() {
+    if (score == 60 && seconds < 30)
+{
+    winmes.classList.add('on')
+}
+
+if (score < 60 && seconds > 30)
+{
+    losemes.classList.add('on')
+}
 }
