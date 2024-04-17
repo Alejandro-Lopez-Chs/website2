@@ -83,15 +83,15 @@ h1 {
     display: none;
 }
 
-.nplay-btn {
+.npbtn {
     position: absolute;
     background-color: #66304f;
     bottom: 60px;
-    display: inline;
+
 }
 
-.nplay-btn.night {
-    display: inline;
+.nplaybtn.night {
+
 }
 
 .day-btn {
