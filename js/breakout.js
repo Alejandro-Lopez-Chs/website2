@@ -2,6 +2,7 @@ rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
 pbtn = document.getElementById('playbtn')
+npbtn = document.getElementById('npbtn')
 dbtn = document.getElementById('daybtn')
 nbtn = document.getElementById('nightbtn')
 
