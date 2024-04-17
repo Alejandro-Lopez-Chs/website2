@@ -24,10 +24,12 @@ choose_insect_btns.forEach(btn => {
         screens[1].classList.add('up')
         selected_insect = {src, alt}
         setTimeout(createInsect, 1000)
-        checkwin()
+
         startGame()
     })
 })
+
+
 
 function startGame() {
     setInterval(increaseTime, 1000)
@@ -75,6 +77,14 @@ function increaseScore() {
     if (score > 19) {
         message.classList.add('visible')
     }
+
+    else if (score == 60 && seconds < 30) {
+        winmes.classList.add('on')
+    }
+
+    else if(score < 60 && seconds > 30) {
+        losemes.classList.add('on')
+    }
     scoreEl.innerHTML = `Score: ${score}`
 }
 function getRandomLocation() {
@@ -86,14 +96,3 @@ function getRandomLocation() {
 }
 
 
-function checkwin() {
-    if (score == 60 && seconds < 30)
-{
-    winmes.classList.add('on')
-}
-
-if (score < 60 && seconds > 30)
-{
-    losemes.classList.add('on')
-}
-}
