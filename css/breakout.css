@@ -78,13 +78,20 @@ h1 {
     display: inline;
 }
 
-.play-btn.night {
-    background-color: #66304f;
-}
-
 .play-btn.active {
     background-color: blue;
     display: none;
+}
+
+.nplay-btn {
+    position: absolute;
+    background-color: #66304f;
+    bottom: 60px;
+    display: none;
+}
+
+.nplay-btn.active {
+    display: inline;
 }
 
 .day-btn {
