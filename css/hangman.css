@@ -60,4 +60,16 @@ h1 {
     position: absolute;
     bottom: 10px;
     left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter {
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 20px;
+    margin: 0 3px;
+    border-bottom: 3px solid #2980b9;
 }
