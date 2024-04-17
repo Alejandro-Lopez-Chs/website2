@@ -2,7 +2,7 @@ rules = document.querySelector('.rules')
 rbtn = document.querySelector('.rules-btn')
 cbtn = document.getElementById('close-btn')
 pbtn = document.getElementById('playbtn')
-npbtn = document.getElementsByClassName('nplay-btn')
+npbtn = document.getElementsID('nplaybtn')
 dbtn = document.getElementById('daybtn')
 nbtn = document.getElementById('nightbtn')
 
@@ -12,7 +12,7 @@ dbtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#c399cf'
     canvas.classList.remove('night')
     playbtn.classList.remove('night')
-    npbtn.classList.add('active')
+
 
 })
 
@@ -21,7 +21,7 @@ nbtn.addEventListener('click', () => {
     nightbtn.classList.add('active')
     document.body.style.backgroundColor = '#46374a'
     canvas.classList.add('night')
-    playbtn.classList.add('night')
+    npbtn.classList.add('night')
     nightdraw()
 })
 

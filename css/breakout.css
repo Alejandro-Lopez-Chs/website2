@@ -87,10 +87,10 @@ h1 {
     position: absolute;
     background-color: #66304f;
     bottom: 60px;
-    display: none;
+    display: inline;
 }
 
-.nplay-btn.active {
+.nplay-btn.night {
     display: inline;
 }
 
