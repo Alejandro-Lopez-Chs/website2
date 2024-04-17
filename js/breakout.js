@@ -164,9 +164,10 @@ function draw()
 
 function nightdraw()
 {
-
+    ctx.clearRect(0,0,canvas.width, canvas.height)
     nightBall()
     nightPaddle()
+    drawScore()
     nightBricks()
 }
 
