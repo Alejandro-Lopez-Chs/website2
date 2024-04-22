@@ -43,8 +43,11 @@ window.addEventListener('keydown', e => {
         if (selectedWord.includes(letter)) {
             if( !correctLetter.includes(letter)) {
                 correctLetters.push(letter)
+
+                displayWord()
+            } else {
+                showNotificatino()
             }
         }
     }
 })
-displayWord()
