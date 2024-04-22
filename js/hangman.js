@@ -11,7 +11,7 @@ const word = ['application', 'programming', 'interface', 'wizard', 'antidisestab
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
-const correctLetters = []
+const correctLetters = ['w', 'i', 'z', 'a', 'r', 'd']
 const wrongLetters = []
 
 // Show hidden word
