@@ -11,7 +11,7 @@ const word = ['application', 'programming', 'interface', 'wizard', 'antidisestab
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
-const correctLetters = ['w', 'i', 'z', 'a', 'r', 'd']
+const correctLetters = []
 const wrongLetters = []
 
 // Show hidden word
@@ -29,7 +29,7 @@ function displayWord() {
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
-        finalMessage innerText = "Congratuslations! You won!"
+        finalMessage.innerText = "Congratuslations! You won!"
         popup.style.display = 'flex'
     }
 }
