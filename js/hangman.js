@@ -48,6 +48,10 @@ window.addEventListener('keydown', e => {
             } else {
                 showNotificatino()
             }
+        }  else {
+            if (!wrongLetters.includes(letter)) {
+                wrongLetters.push(letter)
+            }
         }
     }
 })
