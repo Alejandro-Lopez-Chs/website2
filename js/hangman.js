@@ -25,13 +25,17 @@ function displayWord() {
             </span>
         ` ).join('')
     }
-     `
+  `
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
-        finalMessage innerText = 'Congratuslations! You won!'
+        finalMessage innerText = "Congratuslations! You won!"
         popup.style.display = 'flex'
     }
 }
 
+// Keydown letter press
+window.addEventListener('keydown', e => {
+
+})
 displayWord()
