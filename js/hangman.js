@@ -41,7 +41,9 @@ window.addEventListener('keydown', e => {
         const letter = e.key
 
         if (selectedWord.includes(letter)) {
-            if( !correctLetter.includes(letter))
+            if( !correctLetter.includes(letter)) {
+                correctLetters.push(letter)
+            }
         }
     }
 })
