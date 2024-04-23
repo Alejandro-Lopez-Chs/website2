@@ -106,6 +106,8 @@ playAgainBtn.addEventListener('click', () => {
     displayWord()
 
     updateWrongLettersEl()
+
+    popup.style.display = 'none'
 })
 
 displayWord()
