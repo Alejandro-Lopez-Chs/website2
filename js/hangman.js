@@ -49,6 +49,11 @@ function showNotification() {
     }, 2000)
 }
 
+
+
+
+
+
 // Keydown letter press
 window.addEventListener('keydown', e => {
 
@@ -75,22 +80,10 @@ window.addEventListener('keydown', e => {
     }
 })
 
-// Show hidden word
-function displayWord() {
-    wordEl.innerHTML = `
-    ${selectedWord
-        .split('')
-        .map(letter => `
-            <span class="letter">
-                ${correctLetters.includes(letter) ? letter : ''}
-            </span>
-        ` ).join('')
-    }
-  `
-    const innerWord = wordEl.innerText.replace(/\n/g, '')
+//Restart game and play again
+playAgainBtn.addEventListener('click', () => {
+    correctLetters.length = 0
+    wrongLetters.length = 0
+})
 
-    if (innerWord == selectedWord) {
-        finalMessage.innerText = "Congratuslations! You won!"
-        popup.style.display = 'flex'
-    }
-}
+displayWord()
