@@ -1,6 +1,6 @@
 const wordEl = document.getElementById('word')
 const wrongLettersEl = document.getElementById('wrong-letters')
-const playAgainBtn = document.getElementById('play-again')
+const playAgainBtn = document.getElementById('play-button')
 const popup = document.getElementById('popup-container')
 const notification = document.getElementById('notification-container')
 const finalMessage = document.getElementById('final-message')
@@ -14,6 +14,25 @@ let selectedWord = word[selectedIndex]
 const correctLetters = []
 const wrongLetters = []
 
+// Show hidden word
+function displayWord() {
+    wordEl.innerHTML = `
+    ${selectedWord
+        .split('')
+        .map(letter => `
+            <span class="letter">
+                ${correctLetters.includes(letter) ? letter : ''}
+            </span>
+        ` ).join('')
+    }
+  `
+    const innerWord = wordEl.innerText.replace(/\n/g, '')
+
+    if (innerWord == selectedWord) {
+        finalMessage.innerText = "Congratuslations! You won!"
+        popup.style.display = 'flex'
+    }
+}
 
 // Update the wrong letters
 function updateWrongLettersEl() {
@@ -49,11 +68,6 @@ function showNotification() {
     }, 2000)
 }
 
-
-
-
-
-
 // Keydown letter press
 window.addEventListener('keydown', e => {
 
@@ -84,6 +98,13 @@ window.addEventListener('keydown', e => {
 playAgainBtn.addEventListener('click', () => {
     correctLetters.length = 0
     wrongLetters.length = 0
+
+    selectedIndex = Math.floor(word.length * Math.random())
+    selectedWord = word[selectedIndex]
+
+    displayWord()
+
+    updateWrongLetterEl()
 })
 
 displayWord()
