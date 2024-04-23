@@ -6,7 +6,7 @@ const notification = document.getElementById('notification-container')
 const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 
-const word = ['application', 'programming', 'interface', 'wizard', 'antidisestablishmentarianism']
+const word = ['application', 'programming', 'interface', 'wizard', 'antidisestablishmentarianism', 'jazz']
 
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
@@ -14,25 +14,6 @@ let selectedWord = word[selectedIndex]
 const correctLetters = []
 const wrongLetters = []
 
-// Show hidden word
-function displayWord() {
-    wordEl.innerHTML = `
-    ${selectedWord
-        .split('')
-        .map(letter => `
-            <span class="letter">
-                ${correctLetters.includes(letter) ? letter : ''}
-            </span>
-        ` ).join('')
-    }
-  `
-    const innerWord = wordEl.innerText.replace(/\n/g, '')
-
-    if (innerWord == selectedWord) {
-        finalMessage.innerText = "Congratuslations! You won!"
-        popup.style.display = 'flex'
-    }
-}
 
 // Update the wrong letters
 function updateWrongLettersEl() {
@@ -68,11 +49,6 @@ function showNotification() {
     }, 2000)
 }
 
-
-
-
-
-
 // Keydown letter press
 window.addEventListener('keydown', e => {
 
@@ -98,3 +74,23 @@ window.addEventListener('keydown', e => {
         }
     }
 })
+
+// Show hidden word
+function displayWord() {
+    wordEl.innerHTML = `
+    ${selectedWord
+        .split('')
+        .map(letter => `
+            <span class="letter">
+                ${correctLetters.includes(letter) ? letter : ''}
+            </span>
+        ` ).join('')
+    }
+  `
+    const innerWord = wordEl.innerText.replace(/\n/g, '')
+
+    if (innerWord == selectedWord) {
+        finalMessage.innerText = "Congratuslations! You won!"
+        popup.style.display = 'flex'
+    }
+}
