@@ -104,7 +104,7 @@ playAgainBtn.addEventListener('click', () => {
 
     displayWord()
 
-    updateWrongLetterEl()
+    updateWrongLettersEl()
 })
 
 displayWord()
