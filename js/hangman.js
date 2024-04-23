@@ -38,7 +38,7 @@ function displayWord() {
 function updateWrongLettersEl() {
     wrongLettersEl.innerHTML = `
       ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
-
+      ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `
 }
 
@@ -63,7 +63,7 @@ window.addEventListener('keydown', e => {
         const letter = e.key
 
         if (selectedWord.includes(letter)) {
-            if( !correctLetter.includes(letter)) {
+            if( !correctLetters.includes(letter)) {
                 correctLetters.push(letter)
 
                 displayWord()
