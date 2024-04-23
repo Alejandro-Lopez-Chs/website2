@@ -53,7 +53,7 @@ function updateWrongLettersEl() {
     })
     //check if lost
 if (wrongLetters.length == figureParts.length) {
-    finalMessage.innerText = 'Unfortunately you lost! The correct answer is '
+    finalMessage.innerText = 'Unfortunately you lost! The correct answer is selectedWord'
     popup.style.display = 'flex'
 }
 
