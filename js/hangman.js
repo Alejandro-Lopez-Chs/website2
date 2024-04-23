@@ -43,7 +43,7 @@ function updateWrongLettersEl() {
 function showNotification() {
     notification.classList.add('show')
 
-    setTimeout(() = > {
+    setTimeout(() => {
         notification.classList.remove('show')
     }, 2000)
 }
