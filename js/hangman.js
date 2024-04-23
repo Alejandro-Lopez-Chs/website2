@@ -53,6 +53,12 @@ function updateWrongLettersEl() {
     })
 }
 
+//check if lost
+if (wrongLetters.length == figureParts.length) {
+    finalMessage.innerText = 'Unfortunately you lost!'
+    popup.style.display = 'flex'
+}
+
 // Show Notification
 function showNotification() {
     notification.classList.add('show')
