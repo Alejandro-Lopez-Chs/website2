@@ -1,0 +1,33 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-color: #1e3c6b;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50vh;
+    left: 45vw;
+    background: #333333;
+    color: #ffffff;
+    padding: 20px;
+    line-height: 1.5;
+    height: 110px;
+}
+
+.btn.active {
+    display: none;
+}

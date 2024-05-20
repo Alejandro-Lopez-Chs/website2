@@ -5,8 +5,8 @@ const start_btn = document.getElementById('start-btn')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
-wmes = document.getElementById('winmes')
-lmes = document.getElementById('losemes')
+const wmes = document.getElementById('winmes')
+const lmes = document.getElementById('losemes')
 
 let seconds = 0
 let score = 0
@@ -46,6 +46,9 @@ function increaseTime() {
     }
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds++
+    if(score < 60 && seconds > 30) {
+        losemes.classList.add('active')
+    }
 }
 
 function createInsect() {
@@ -78,12 +81,8 @@ function increaseScore() {
         message.classList.add('visible')
     }
 
-    else if (score == 60 && seconds < 30) {
-        winmes.classList.add('on')
-    }
-
-    else if(score < 60 && seconds > 30) {
-        losemes.classList.add('on')
+    if (score >= 60 && seconds < 30) {
+        winmes.classList.add('active')
     }
     scoreEl.innerHTML = `Score: ${score}`
 }

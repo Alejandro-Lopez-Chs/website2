@@ -14,6 +14,7 @@ let selectedWord = word[selectedIndex]
 const correctLetters = []
 const wrongLetters = []
 
+
 // Show hidden word
 function displayWord() {
     wordEl.innerHTML = `
@@ -28,9 +29,11 @@ function displayWord() {
   `
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
+    //check if won
     if (innerWord == selectedWord) {
         finalMessage.innerText = "Congratuslations! You won!"
         popup.style.display = 'flex'
+
     }
 }
 
@@ -53,9 +56,11 @@ function updateWrongLettersEl() {
     })
     //check if lost
 if (wrongLetters.length == figureParts.length) {
-    finalMessage.innerText = 'Unfortunately you lost! The correct answer is ${selectedWord}'
+    finalMessage.innerText = 'Unfortunately you lost! The correct answer is...'
+    answer.innerText = selectedWord
     popup.style.display = 'flex'
-}
+
+    }
 
 }
 
@@ -63,7 +68,7 @@ if (wrongLetters.length == figureParts.length) {
 // Show Notification
 function showNotification() {
     notification.classList.add('show')
-
+c 
     setTimeout(() => {
         notification.classList.remove('show')
     }, 2000)
@@ -71,6 +76,8 @@ function showNotification() {
 
 // Keydown letter press
 window.addEventListener('keydown', e => {
+
+
 
     if (e.keyCode >= 65 && e.keyCode <=90) {
         const letter = e.key
@@ -92,8 +99,13 @@ window.addEventListener('keydown', e => {
                 showNotification()
             }
         }
+
     }
 })
+
+
+
+
 
 //Restart game and play again
 playAgainBtn.addEventListener('click', () => {
@@ -106,6 +118,7 @@ playAgainBtn.addEventListener('click', () => {
     displayWord()
 
     updateWrongLettersEl()
+
 
     popup.style.display = 'none'
 })

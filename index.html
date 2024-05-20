@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>website2</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1>This is my 2nd website!!!</h1>
-    <li><a href="breakout.html">breakout</a></li>
+    <h1>Arcade</h1>
+    <audio id="arcade" src="sounds/arcade.wav"></audio>
+    <button id="intro-btn" class="btn">Welcome to the arcade (click to continue)</button>
+    <a href="breakout.html"><img src ="images/Breakout.png" onclick="document.getElementById('arcade').play();"></a>
+    <a href="hangman.html"><img src ="images/Hang3.png"></a>
+    <a href="insect.html"><img src ="images/Insect.png"></a>
 
 </body>
+    <script src="js/index.js"></script>
 </html>
