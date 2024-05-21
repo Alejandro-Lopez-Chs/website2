@@ -38,7 +38,7 @@ function displayWord(end) {
         answer.innerText = ""
         popup.style.display = 'flex'
         end = false
-        console.log(end)
+
     }
 
 
@@ -68,7 +68,7 @@ if (wrongLetters.length == figureParts.length) {
     answer.innerText = selectedWord
     popup.style.display = 'flex'
     end = false
-    console.log(end)
+
     }
 
 }
@@ -83,11 +83,11 @@ function showNotification() {
     }, 2000)
 }
 
-console.log(end)
+
 // Keydown letter press
 window.addEventListener('keydown', e => {
 
-    if (end == true){
+    if (end == true) {
     if (e.keyCode >= 65 && e.keyCode <=90) {
         const letter = e.key
 
@@ -108,11 +108,10 @@ window.addEventListener('keydown', e => {
                 showNotification()
             }
         }
-
     }
-}
+    }
 })
-}
+
 
 
 
