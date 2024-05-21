@@ -84,6 +84,9 @@ h1 {
     display: inline;
 }
 
+.play-btn:hover {
+    background-color: #8f4770;
+}
 .play-btn.active {
     background-color: blue;
     display: none;

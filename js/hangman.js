@@ -32,8 +32,12 @@ function displayWord() {
     //check if won
     if (innerWord == selectedWord) {
         finalMessage.innerText = "Congratuslations! You won!"
+        answer.innerText = ""
         popup.style.display = 'flex'
+    }
 
+    if (innerWord == selectedWord) {
+        $(document).off('keypress');
     }
 }
 
@@ -68,17 +72,16 @@ if (wrongLetters.length == figureParts.length) {
 // Show Notification
 function showNotification() {
     notification.classList.add('show')
-c 
+c
     setTimeout(() => {
         notification.classList.remove('show')
     }, 2000)
 }
 
+
+
 // Keydown letter press
 window.addEventListener('keydown', e => {
-
-
-
     if (e.keyCode >= 65 && e.keyCode <=90) {
         const letter = e.key
 
