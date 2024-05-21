@@ -8,7 +8,7 @@ const figureParts = document.querySelectorAll('.figure-part')
 
 const word = ['application', 'programming', 'interface', 'wizard', 'antidisestablishmentarianism', 'jazz', 'babylon',]
 
-var end = true
+let end = true
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
@@ -63,12 +63,10 @@ function updateWrongLettersEl(end) {
     })
     //check if lost
 if (wrongLetters.length == figureParts.length) {
-
     finalMessage.innerText = 'Unfortunately you lost! The correct answer is...'
     answer.innerText = selectedWord
     popup.style.display = 'flex'
     end = false
-
     }
 
 }
