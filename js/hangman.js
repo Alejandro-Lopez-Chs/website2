@@ -18,7 +18,7 @@ const wrongLetters = []
 
 
 // Show hidden word
-function displayWord(end) {
+function displayWord() {
     wordEl.innerHTML = `
     ${selectedWord
         .split('')
@@ -45,7 +45,7 @@ function displayWord(end) {
 }
 
 // Update the wrong letters
-function updateWrongLettersEl(end) {
+function updateWrongLettersEl() {
     wrongLettersEl.innerHTML = `
       ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
       ${wrongLetters.map(letter => `<span>${letter}</span>`)}
@@ -93,7 +93,7 @@ window.addEventListener('keydown', e => {
             if( !correctLetters.includes(letter)) {
                 correctLetters.push(letter)
 
-                displayWord(end)
+                displayWord()
             } else {
                 showNotification()
             }
@@ -101,7 +101,7 @@ window.addEventListener('keydown', e => {
             if ( !wrongLetters.includes(letter)) {
                 wrongLetters.push(letter)
 
-                updateWrongLettersEl(end)
+                updateWrongLettersEl()
             } else {
                 showNotification()
             }
