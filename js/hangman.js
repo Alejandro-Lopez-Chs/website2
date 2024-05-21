@@ -110,6 +110,7 @@ window.addEventListener('keydown', e => {
         }
 
     }
+}
 })
 }
 
