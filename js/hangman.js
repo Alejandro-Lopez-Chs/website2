@@ -115,6 +115,7 @@ window.addEventListener('keydown', e => {
 
 //Restart game and play again
 playAgainBtn.addEventListener('click', () => {
+    end = true
     correctLetters.length = 0
     wrongLetters.length = 0
 
