@@ -6,8 +6,9 @@ const notification = document.getElementById('notification-container')
 const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 
-const word = ['application', 'programming', 'interface', 'wizard', 'antidisestablishmentarianism', 'jazz']
+const word = ['application', 'programming', 'interface', 'wizard', 'antidisestablishmentarianism', 'jazz', 'babylon',]
 
+var end = true
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
@@ -15,8 +16,9 @@ const correctLetters = []
 const wrongLetters = []
 
 
+
 // Show hidden word
-function displayWord() {
+function displayWord(end) {
     wordEl.innerHTML = `
     ${selectedWord
         .split('')
@@ -31,18 +33,19 @@ function displayWord() {
 
     //check if won
     if (innerWord == selectedWord) {
+
         finalMessage.innerText = "Congratuslations! You won!"
         answer.innerText = ""
         popup.style.display = 'flex'
+        end = false
+        console.log(end)
     }
 
-    if (innerWord == selectedWord) {
-        $(document).off('keypress');
-    }
+
 }
 
 // Update the wrong letters
-function updateWrongLettersEl() {
+function updateWrongLettersEl(end) {
     wrongLettersEl.innerHTML = `
       ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
       ${wrongLetters.map(letter => `<span>${letter}</span>`)}
@@ -60,10 +63,12 @@ function updateWrongLettersEl() {
     })
     //check if lost
 if (wrongLetters.length == figureParts.length) {
+
     finalMessage.innerText = 'Unfortunately you lost! The correct answer is...'
     answer.innerText = selectedWord
     popup.style.display = 'flex'
-
+    end = false
+    console.log(end)
     }
 
 }
@@ -72,16 +77,17 @@ if (wrongLetters.length == figureParts.length) {
 // Show Notification
 function showNotification() {
     notification.classList.add('show')
-c
+
     setTimeout(() => {
         notification.classList.remove('show')
     }, 2000)
 }
 
-
-
+console.log(end)
 // Keydown letter press
 window.addEventListener('keydown', e => {
+
+    if (end == true){
     if (e.keyCode >= 65 && e.keyCode <=90) {
         const letter = e.key
 
@@ -89,7 +95,7 @@ window.addEventListener('keydown', e => {
             if( !correctLetters.includes(letter)) {
                 correctLetters.push(letter)
 
-                displayWord()
+                displayWord(end)
             } else {
                 showNotification()
             }
@@ -97,7 +103,7 @@ window.addEventListener('keydown', e => {
             if ( !wrongLetters.includes(letter)) {
                 wrongLetters.push(letter)
 
-                updateWrongLettersEl()
+                updateWrongLettersEl(end)
             } else {
                 showNotification()
             }
@@ -105,8 +111,7 @@ window.addEventListener('keydown', e => {
 
     }
 })
-
-
+}
 
 
 
